@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>fukinCarouselMak</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="carousel.js" type="text/javascript"></script>
+              
+    <style>
+        .container {
+            width:80%;
+            height: 350px;
+            overflow:hidden;
+            margin: auto;
+        }
+        .fukinPosition {
+            width: 200px;
+            height: 350px;
+            display:inline-block;
+        }
+
+    </style>
+
+</head>
+<body>
+ <div class="container">
+    <div class="fukinPosition" id="1"></div>
+    <div class="fukinPosition" id="2"></div>
+    <div class="fukinPosition" id="3"></div>
+    <div class="fukinPosition" id="4"></div>
+ </div>
+<script>
+    var timing = setInterval(fukinPrint, 1000);
+    
+    function fukinPrint() {
+        var i;
+        for (i = 0; i < fukinPosition.length; i++) {
+
+            imgTag = "<img src='boton";
+            imgTag2 = ".png' width='200'>";
+            var fukinImagen = document.getElementsByClassName("fukinPosition");
+            fukinImagen[0].innerHTML = imgTag.concat(i, imgTag2);
+            fukinImagen[1].innerHTML = imgTag.concat(i + 1, imgTag2);
+            fukinImagen[2].innerHTML = imgTag.concat(i + 2, imgTag2);
+            fukinImagen[3].innerHTML = imgTag.concat(i + 3, imgTag2);
+            fukinImagen[4].innerHTML = imgTag.concat(i + 4, imgTag2); // 5
+
+        }
+
+    }
+    
+    
+</script>
+</body>
+</html>
